@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="海边的小贝壳 - 探索海洋生物的奥秘，分享贝壳收藏鉴赏指南，介绍海螺、海扇、海菊等贝壳种类，提供贝壳标本制作与手工DIY教程，以及海滩拾贝的安全与环保建议。">
+    <meta name="keywords" content="海边的小贝壳, 贝壳收藏, 海螺鉴赏, 贝壳标本, 海滩拾贝, 海洋生物">
+    <title>海边的小贝壳 - 贝壳收藏鉴赏与海洋科普指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #008080;
+            --secondary-color: #20B2AA;
+            --accent-color: #FFD700;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-light: #F9FBFB;
+            --white: #FFFFFF;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(0,128,128,0.8), rgba(32,178,170,0.8)), url('https://picsum.photos/seed/ocean/1920/1080') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Collection Showcase */
+        .collection {
+            padding: 5rem 0;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .shell-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .shell-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 128, 128, 0.15);
+        }
+
+        .shell-image {
+            height: 220px;
+            width: 100%;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .shell-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .shell-info {
+            padding: 1.5rem;
+        }
+
+        .shell-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .shell-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .shell-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1rem;
+        }
+
+        /* Guide Section */
+        .guide {
+            padding: 5rem 0;
+            background-color: #E0F7FA;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .guide-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .guide-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .guide-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .guide-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        /* Safety Tips */
+        .safety {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+
+        .safety-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .safety-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            background-color: #FFFBF0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .safety-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .safety-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .safety-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 4rem 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            border: none;
+            padding: 0 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: #FFC107;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #BDC3C7;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-wrapper nav.active {
+                display: flex;
+            }
+
+            .nav-wrapper nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form button {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🐚</span> 海边的小贝壳
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#collection">贝壳图鉴</a></li>
+                    <li><a href="#guide">鉴赏指南</a></li>
+                    <li><a href="#safety">拾贝安全</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索大海的馈赠</h1>
+                <p>从海滩拾贝到深海鉴赏，这里是所有海洋生物爱好者的家园。发现、学习、分享那些来自海边的奇妙小贝壳。</p>
+                <div style="margin-top: 2rem;">
+                    <a href="#collection" class="btn btn-primary">开始探索</a>
+                    <a href="#guide" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">阅读指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>种类图鉴</h3>
+                        <p>收录超过200种常见及珍稀贝壳，附带详细的形态描述与栖息环境介绍。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>标本制作</h3>
+                        <p>提供专业的贝壳清洗、漂白与固定教程，保存海洋生物的原始美感。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>摄影分享</h3>
+                        <p>汇聚全球拾贝爱好者的精美作品，激发你的创作灵感与收藏热情。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Section -->
+        <section id="collection" class="collection">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门贝壳图鉴</h2>
+                    <p>认识这些常见于海滩与水族馆的美丽生物</p>
+                </div>
+                <div class="collection-grid">
+                    <!-- Item 1 -->
+                    <article class="shell-card">
+                        <div class="shell-image">
+                            <img src="https://picsum.photos/seed/conch/400/300" alt="海螺">
+                            <span class="shell-tag">常见</span>
+                        </div>
+                        <div class="shell-info">
+                            <h3>法螺</h3>
+                            <p>法螺又称海螺，壳体巨大，表面光滑，常用于佛教法器或装饰品。主要栖息在热带海洋的珊瑚礁中。</p>
+                            <div class="shell-meta">
+                                <span>栖息地：热带海域</span>
+                                <span>食用性：不可食用</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Item 2 -->
+                    <article class="shell-card">
+                        <div class="shell-image">
+                            <img src="https://picsum.photos/seed/scallop/400/300" alt="海扇">
+                            <span class="shell-tag">观赏</span>
+                        </div>
+                        <div class="shell-info">
+                            <h3>海扇</h3>
+                            <p>双壳纲海扇蛤科动物，贝壳呈扇形，色彩斑斓，是极佳的水族馆展示物种，也常被制成精美的工艺品。</p>
+                            <div class="shell-meta">
+                                <span>栖息地：潮间带岩石</span>
+                                <span>食用性：可食用</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Item 3 -->
+                    <article class="shell-card">
+                        <div class="shell-image">
+                            <img src="https://picsum.photos/seed/turbo/400/300" alt="海蛞蝓">
+                            <span class="shell-tag">特殊</span>
+                        </div>
+                        <div class="shell-info">
+                            <h3>海蛞蝓（鲍鱼）</h3>
+                            <p>鲍鱼属于腹足纲，壳厚而坚硬，呈卵圆形。肉质鲜美，是世界公认的海珍品之一。</p>
+                            <div class="shell-meta">
+                                <span>栖息地：冷水海域</span>
+                                <span>食用性：珍贵食材</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Item 4 -->
+                    <article class="shell-card">
+                        <div class="shell-image">
+                            <img src="https://picsum.photos/seed/starfish/400/300" alt="海星">
+                            <span class="shell-tag">无壳</span>
+                        </div>
+                        <div class="shell-info">
+                            <h3>海星</h3>
+                            <p>虽然没有硬壳，但其五角星般的形态和再生能力使其成为海滩上最受欢迎的发现物之一。</p>
+                            <div class="shell-meta">
+                                <span>栖息地：海底沙地</span>
+                                <span>再生：强</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container guide-container">
+                <div class="guide-content">
+                    <h2>如何鉴赏与收藏贝壳</h2>
+                    <p>收藏贝壳不仅是一种爱好，更是一门关于自然与历史的艺术。想要开始你的收藏之旅？请遵循以下核心原则：</p>
+                    <ul class="guide-list">
+                        <li><strong>完整性：</strong>选择壳体完整、无裂缝、无孔洞的贝壳，这直接决定了其观赏价值和收藏价值。</li>
+                        <li><strong>色泽：</strong>优质的贝壳表面应光泽度好，颜色鲜艳且自然。避免经过化学漂白处理的贝壳。</li>
+                        <li><strong>清洁：</strong>确保贝壳表面清洁，无附着物或寄生虫，这对长期保存至关重要。</li>
+                        <li><strong>真伪：</strong>对于稀有的贝壳品种，务必确认其来源合法，避免购买走私或非法捕获的标本。</li>
+                    </ul>
+                </div>
+                <div class="guide-image">
+                    <img src="https://picsum.photos/seed/beach/600/400" alt="海滩上的贝壳">
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section id="safety" class="safety">
+            <div class="container">
+                <div class="section-title">
+                    <h2>海滩拾贝安全提示</h2>
+                    <p>享受大海的同时，请务必遵守安全与环保规范</p>
+                </div>
+                <div class="safety-wrapper">
+                    <div class="safety-item">
+                        <div class="safety-icon">⚠️</div>
+                        <div class="safety-content">
+                            <h4>避开危险生物</h4>
+                            <p>不要触摸或捡拾不明海生物，特别是海葵、水母、海胆以及色彩鲜艳的贝类，它们可能含有毒刺或细菌。</p>
+                        </div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">🚫</div>
+                        <div class="safety-content">
+                            <h4>遵守当地法规</h4>
+                            <p>许多自然保护区和特定海滩禁止私人捡拾贝壳。请提前查询当地规定，保护海洋生态平衡。</p>
+                        </div>
+                    </div>
+                    <div class="safety-item">
+                        <div class="safety-icon">🦀</div>
+                        <div class="safety-content">
+                            <h4>警惕螃蟹与藤壶</h4>
+                            <p>许多贝壳表面附着有螃蟹、藤壶或海绵，直接徒手触摸容易受伤。建议使用工具或手套进行操作。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>订阅我们的简报</h2>
+                <p>获取最新的贝壳品种介绍、鉴赏技巧及海滩旅行攻略。</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢您的订阅！我们将定期为您推送海洋科普内容。');">
+                    <input type="email" placeholder="请输入您的电子邮箱" required>
+                    <button type="submit">订阅</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于海边的小贝壳</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        我们致力于推广海洋生物科普知识，分享贝壳鉴赏心得，并倡导保护海洋环境的理念。欢迎所有热爱大海的朋友们加入我们。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#collection">贝壳图鉴</a></li>
+                        <li><a href="#guide">鉴赏指南</a></li>
+                        <li><a href="#safety">拾贝安全</a></li>
+                        <li><a href="#">加入社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">海洋保护组织</a></li>
+                        <li><a href="#">标本制作工具</a></li>
+                        <li><a href="#">海洋摄影技巧</a></li>
+                        <li><a href="#">常见问题解答</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 海边的小贝壳 版权所有 | 仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.03)';
+            }
+        });
+    </script>
+</body>
+</html>
