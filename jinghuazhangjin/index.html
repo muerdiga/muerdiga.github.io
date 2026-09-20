@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="警花张瑾瑜个人简介、从警经历、工作事迹及社会贡献。了解这位优秀女警的职业生涯与奉献精神。">
+    <meta name="keywords" content="警花张瑾瑜,张瑾瑜,女警,警察事迹,从警经历">
+    <title>警花张瑾瑜-优秀女警事迹与职业生涯展示</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-blue: #004e92;
+            --secondary-blue: #000428;
+            --accent-red: #e63946;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "👮‍♀️";
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: url('https://picsum.photos/seed/policehero/1920/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 20, 50, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-red);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d32f2f;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-blue);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .profile-img-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            padding: 25px;
+        }
+
+        .profile-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            color: var(--text-light);
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #ddd;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent-red);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent-red);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background-color: var(--white);
+            padding: 50px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .achievement-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .achievement-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .achievement-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .faq-question.active::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-light);
+            padding-right: 20px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-blue);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .timeline-item::before {
+                left: -26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">警花张瑾瑜</div>
+            <nav>
+                <ul>
+                    <li><a href="#profile" class="active">个人简介</a></li>
+                    <li><a href="#timeline">从警历程</a></li>
+                    <li><a href="#achievements">工作事迹</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>警花张瑾瑜</h1>
+                <p>扎根基层，心系群众，以女性特有的细腻与坚韧守护一方平安。</p>
+                <a href="#profile" class="btn">了解更多</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <div class="container">
+                <div class="section-title">
+                    <h2>人物简介</h2>
+                    <p>关于张瑾瑜警官的基本信息与职业定位</p>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-card">
+                        <div class="profile-img-wrapper">
+                            <img src="https://picsum.photos/seed/policewoman/400/500" alt="警花张瑾瑜工作照">
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>基本信息</h3>
+                        <div class="info-item">
+                            <span class="info-label">姓名</span>
+                            <span class="info-value">张瑾瑜</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">所属单位</span>
+                            <span class="info-value">[某市/区] 公安局 [具体科室]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">警号</span>
+                            <span class="info-value">[具体警号]</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">从警时间</span>
+                            <span class="info-value">[具体年份]年[具体月份]月</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">主要职责</span>
+                            <span class="info-value">治安管理、巡逻防控、窗口服务</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">荣誉头衔</span>
+                            <span class="info-value">优秀人民警察、三八红旗手</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>从警历程</h2>
+                    <p>职业生涯中的关键节点与成长轨迹</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2010年</div>
+                        <div class="timeline-content">
+                            <h4>初入警营，接受训练</h4>
+                            <p>张瑾瑜通过公务员考试，正式加入公安队伍。在训练基地完成了为期六个月的封闭式警务技能与体能训练，以优异成绩结业，被分配至基层派出所。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2012年</div>
+                        <div class="timeline-content">
+                            <h4>基层磨砺，扎根一线</h4>
+                            <p>在派出所工作期间，她迅速适应环境，从协助处理警情做起，逐渐独立负责社区警务工作。她深入社区，熟悉辖区内每一条街道、每一户居民。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016年</div>
+                        <div class="timeline-content">
+                            <h4>业务骨干，专项攻坚</h4>
+                            <p>因表现优异，被抽调至局治安大队参与专项打击行动。在处理多起复杂治安案件及群体性事件中，展现出出色的沟通协调能力和法律素养。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020年至今</div>
+                        <div class="timeline-content">
+                            <h4>岗位晋升，服务群众</h4>
+                            <p>担任[具体职务]，致力于优化便民服务措施，创新工作方法，有效提升了辖区群众的安全感和满意度，多次获得上级表彰。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>从警年限</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>服务群众数</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>获得嘉奖</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>群众满意度</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <div class="container">
+                <div class="section-title">
+                    <h2>工作事迹与荣誉</h2>
+                    <p>在平凡岗位上创造的不凡业绩</p>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🛡️</div>
+                        <h4>社区安全守护</h4>
+                        <p>长期坚持开展夜间巡逻，辖区内盗窃案件发生率显著下降，成功调解邻里纠纷百余起，成为居民心中的“定心丸”。</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">👮‍♀️</div>
+                        <h4>窗口服务先锋</h4>
+                        <p>在户籍窗口工作中，始终秉持“微笑服务、高效办理”的原则，优化办事流程，让数据多跑路，让群众少跑腿。</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">💡</div>
+                        <h4>反诈宣传达人</h4>
+                        <p>针对电信网络诈骗高发态势，深入社区、学校、企业开展反诈宣传讲座，制作通俗易懂的宣传材料，帮助群众守好“钱袋子”。</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">❤️</div>
+                        <h4>急难先锋</h4>
+                        <p>在多次突发警情中，总是冲锋在前。曾成功救助受困群众、搜救走失儿童，用实际行动诠释了人民警察为人民的责任与担当。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问答</h2>
+                    <p>关于警花张瑾瑜的公众关注点</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">警花张瑾瑜是哪里的警察？</button>
+                        <div class="faq-answer">
+                            <p>张瑾瑜警官隶属于[某市/区]公安局[具体科室]，主要负责[具体辖区或业务领域]的治安管理与服务工作。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">张瑾瑜警官获得过哪些主要荣誉？</button>
+                        <div class="faq-answer">
+                            <p>凭借出色的工作表现，张瑾瑜警官曾多次获得“优秀公务员”、“优秀人民警察”以及“三八红旗手”等荣誉称号，并多次受到上级部门的通报表扬。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">公众可以联系到张瑾瑜警官吗？</button>
+                        <div class="faq-answer">
+                            <p>张瑾瑜警官作为一线执法人员，主要职责是维护社会治安。公众如有紧急警务求助，请直接拨打110报警电话；如需咨询相关业务政策，请通过公安机关官方公布的渠道进行咨询。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>警花张瑾瑜</h3>
+                <p>忠诚 · 公正 · 廉洁 · 服务</p>
+            </div>
+            <div class="footer-links">
+                <a href="#profile">个人简介</a>
+                <a href="#timeline">从警历程</a>
+                <a href="#achievements">事迹展示</a>
+                <a href="#">联系单位</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 公安系统宣传展示页 | 仅供介绍参考
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.faq-question');
+            
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-question').forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.maxHeight = null;
+                    });
+
+                    // Toggle current answer
+                    if (!isActive) {
+                        question.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
