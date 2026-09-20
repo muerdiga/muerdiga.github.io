@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玛雅传说 - 探索中美洲古代文明的神秘面纱，解析玛雅历法、金字塔、预言与失落的城市，提供深度历史考据与旅游指南。">
+    <meta name="keywords" content="玛雅传说, 玛雅文明, 玛雅金字塔, 玛雅历法, 玛雅预言, 玛雅遗址">
+    <title>玛雅传说 - 古代文明探秘与历史百科</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #F4A460;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #F9F7F2;
+            --white: #FFFFFF;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/maya_temple/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Core Concepts Grid */
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .concept-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .concept-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .concept-body {
+            padding: 25px;
+        }
+
+        .concept-body h3 {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .concept-body p {
+            color: var(--text-light);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Featured Article */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .featured-content p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #FFF3E0;
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Timeline / History */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #e0e0e0;
+            margin-left: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            border: 2px solid var(--white);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        /* Interactive Tool Section */
+        .tool-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .tool-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .tool-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .calendar-day {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .calendar-day.highlight {
+            background: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .featured-section { grid-template-columns: 1fr; }
+            .header-container { padding: 0 15px; }
+            nav { display: none; } /* Simplified for mobile */
+            .search-btn { display: none; }
+            .timeline { margin-left: 10px; padding-left: 20px; }
+            .timeline-item::before { left: -26px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M10 9a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v12"/></svg>
+                玛雅传说 <span>探索失落文明</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#history" class="active">历史沿革</a></li>
+                    <li><a href="#culture">文化奥秘</a></li>
+                    <li><a href="#calendar">历法与预言</a></li>
+                    <li><a href="#travel">遗址旅游</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍 搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>穿越千年时光，解读玛雅传说</h1>
+                <p>从中美洲的热带雨林到神秘的金字塔尖，揭开美洲古代文明最璀璨的篇章。</p>
+                <a href="#history" class="cta-button">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Core Concepts -->
+        <section class="container">
+            <div class="section-title">
+                <h2>文明核心</h2>
+                <p>理解玛雅传说的基础知识</p>
+            </div>
+            <div class="concepts-grid">
+                <article class="concept-card">
+                    <img src="https://picsum.photos/seed/maya_pyramid/400/300.jpg" alt="玛雅金字塔" class="concept-img">
+                    <div class="concept-body">
+                        <h3>玛雅金字塔</h3>
+                        <p>不仅是祭祀神灵的场所，更是天文学与建筑学的奇迹。库库尔坎金字塔的日落奇观闻名于世。</p>
+                        <a href="#" class="read-more">了解更多 →</a>
+                    </div>
+                </article>
+                <article class="concept-card">
+                    <img src="https://picsum.photos/seed/maya_calendar/400/300.jpg" alt="玛雅历法" class="concept-img">
+                    <div class="concept-body">
+                        <h3>复杂的历法系统</h3>
+                        <p>玛雅人拥有精确的太阳历和长纪年历，能够预测日食和行星位置，展现了极高的数学成就。</p>
+                        <a href="#" class="read-more">了解更多 →</a>
+                    </div>
+                </article>
+                <article class="concept-card">
+                    <img src="https://picsum.photos/seed/maya_glyphs/400/300.jpg" alt="玛雅文字" class="concept-img">
+                    <div class="concept-body">
+                        <h3>象形文字</h3>
+                        <p>世界上唯一发展成熟的表意文字系统之一。石碑和陶器上的铭文记录了王权更迭与历史事件。</p>
+                        <a href="#" class="read-more">了解更多 →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="container">
+            <div class="section-title">
+                <h2>深度专题</h2>
+                <p>关于玛雅文明的深度解析</p>
+            </div>
+            <div class="featured-section">
+                <img src="https://picsum.photos/seed/maya_jaguar/800/600.jpg" alt="美洲虎战士" class="featured-image">
+                <div class="featured-content">
+                    <div class="tags">
+                        <span class="tag">历史</span>
+                        <span class="tag">考古</span>
+                    </div>
+                    <h3>美洲虎战士：玛雅帝国的军事精英</h3>
+                    <p>在玛雅传说中，美洲虎战士象征着力量与勇气。他们不仅是军队的中坚力量，也是皇室近卫军的重要组成部分。通过精美的陶器和石刻，我们可以窥见这支神秘军队的装备、战术及其在宗教仪式中的特殊地位。</p>
+                    <a href="#" class="read-more">阅读完整文章</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Timeline -->
+        <section id="history" class="container">
+            <div class="section-title">
+                <h2>历史沿革</h2>
+                <p>玛雅文明的时间线与重要节点</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">公元前2000年 - 公元250年</div>
+                    <div class="timeline-content">
+                        <h4>前古典期</h4>
+                        <p>玛雅文字、历法系统与农业文明在低地地区开始萌芽，奥尔梅克文化的影响深远。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">公元250年 - 公元900年</div>
+                    <div class="timeline-content">
+                        <h4>古典期</h4>
+                        <p>提卡尔、帕伦克等城邦达到鼎盛，金字塔与宫殿群大量建造，象形文字记录历史。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">公元900年 - 公元1524年</div>
+                    <div class="timeline-content">
+                        <h4>后古典期</h4>
+                        <p>政治中心北移至奇琴伊察，尤卡坦半岛兴起玛雅潘等强大城邦，受托尔特克文化影响。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">16世纪初</div>
+                    <div class="timeline-content">
+                        <h4>西班牙殖民</h4>
+                        <p>埃尔南·科尔特斯征服尤卡坦，玛雅文明在征服与瘟疫的双重打击下逐渐衰落。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Interactive -->
+        <section id="calendar" class="tool-section">
+            <h2>玛雅长纪年历（示例）</h2>
+            <p>玛雅历法使用二十进制与十进制结合。这是基于当前日期生成的模拟视图，展示了长纪年历中一个重要的周期节点。</p>
+            <div class="calendar-grid">
+                <div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div>
+                <div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day highlight">14</div>
+                <div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div>
+            </div>
+            <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">*注：此为视觉演示，非精确天文计算。</p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">玛雅预言真的预言了2012年的世界末日吗？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        这是一个常见的误解。玛雅长纪年历的终点（13.0.0.0.0）仅仅代表一个周期的结束，就像我们的一月一号一样，象征着新纪元的开始，而非世界的终结。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">玛雅人去了哪里？为什么突然消失了？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        玛雅人并没有完全消失，他们至今仍生活在墨西哥尤卡坦半岛、伯利兹、危地马拉等地。关于“消失”通常指古典期核心城邦的废弃，可能由干旱、环境退化、战争或过度开发土地导致。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">去哪里可以参观玛雅遗址？
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        主要的参观地点包括墨西哥的奇琴伊察、乌斯马尔，危地马拉的蒂卡尔，以及伯利兹的卡拉科尔等。每个遗址都有其独特的建筑风格和历史背景。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p>致力于传播世界古代文明知识，特别是美洲玛雅文化的保护与研究。为历史爱好者提供权威、通俗的科普内容。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#history">历史时间线</a></li>
+                    <li><a href="#culture">宗教与神话</a></li>
+                    <li><a href="#calendar">历法系统</a></li>
+                    <li><a href="#travel">旅游指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">考古报告</a></li>
+                    <li><a href="#">学术期刊</a></li>
+                    <li><a href="#">遗址地图</a></li>
+                    <li><a href="#">志愿者招募</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 玛雅传说探索网 版权所有 | 内容仅供科普参考</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
