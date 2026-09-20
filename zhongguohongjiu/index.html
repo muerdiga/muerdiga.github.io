@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国红酒-产区风土、品鉴指南与品牌溯源</title>
+    <meta name="description" content="中国红酒网提供最全面的中国葡萄酒产区介绍、名酒品牌鉴赏、品鉴技巧与选购指南。深入了解赤霞珠、蛇龙珠等中国本土葡萄品种的独特风味。">
+    <meta name="keywords" content="中国红酒,国产葡萄酒,中国葡萄酒产区,红酒品鉴,赤霞珠,红酒选购">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6b2c1e; /* 深红 */
+            --secondary-color: #c0392b; /* 鲜红 */
+            --accent-color: #d4af37; /* 香槟金 */
+            --bg-color: #f9f7f2; /* 米白/羊皮纸色 */
+            --text-main: #2c2c2c;
+            --text-light: #666;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/redwinevineyard/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 3rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            display: inline-block;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .hero-btn:hover {
+            background-color: transparent;
+            border-color: var(--white);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--white);
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Regions Grid */
+        .regions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .region-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .region-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .region-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .region-info {
+            padding: 1.5rem;
+        }
+
+        .region-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .region-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .region-link {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Wine Types */
+        .wine-types {
+            background-color: var(--white);
+        }
+
+        .type-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .type-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .type-icon {
+            background-color: #fceceb;
+            color: var(--primary-color);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .type-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .type-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Buying Guide */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .guide-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .guide-steps li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .guide-steps li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+        }
+
+        .guide-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>🍷</span> 中国红酒
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#regions">产区介绍</a></li>
+                    <li><a href="#types">品种鉴赏</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#culture">品鉴文化</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-btn">开始选购</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>品味东方风土</h1>
+                <p>探索中国葡萄酒的独特魅力，从北纬39度的赤霞珠到新疆的晚熟美酒</p>
+                <a href="#regions" class="hero-btn">探索产区</a>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>30+</h3>
+                    <p>主要产区</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10万+</h3>
+                    <p>注册酒庄</p>
+                </div>
+                <div class="stat-item">
+                    <h3>300+</h3>
+                    <p>本土葡萄品种</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10年+</h3>
+                    <p>工业化生产历史</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regions Section -->
+        <section id="regions" class="container">
+            <div class="section-title">
+                <h2>中国红酒核心产区</h2>
+                <p>中国幅员辽阔，不同纬度与气候孕育出风格迥异的葡萄酒</p>
+            </div>
+            
+            <div class="regions-grid">
+                <!-- Card 1 -->
+                <article class="region-card">
+                    <img src="https://picsum.photos/seed/ningxia/400/300.jpg" alt="宁夏贺兰山东麓" class="region-img">
+                    <div class="region-info">
+                        <h3>宁夏贺兰山东麓</h3>
+                        <p>中国葡萄酒的“黄金产区”，拥有得天独厚的沙砾土壤和昼夜温差，以赤霞珠和美乐酿造的干红著称。</p>
+                        <a href="#" class="region-link">了解详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="region-card">
+                    <img src="https://picsum.photos/seed/xinjiang/400/300.jpg" alt="新疆天山北麓" class="region-img">
+                    <div class="region-info">
+                        <h3>新疆天山北麓</h3>
+                        <p>光照充足，蒸发量大，葡萄糖分积累高。这里出产的葡萄酒香气浓郁，口感醇厚，具有独特的西域风味。</p>
+                        <a href="#" class="region-link">了解详情 &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="region-card">
+                    <img src="https://picsum.photos/seed/shandong/400/300.jpg" alt="山东蓬莱" class="region-img">
+                    <div class="region-info">
+                        <h3>山东蓬莱</h3>
+                        <p>中国葡萄酒工业的发源地，气候温和，靠近海洋，葡萄品种资源丰富，是国产高端葡萄酒的重要生产基地。</p>
+                        <a href="#" class="region-link">了解详情 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Wine Types Section -->
+        <section id="types" class="wine-types">
+            <div class="container">
+                <div class="section-title">
+                    <h2>国产名品鉴赏</h2>
+                    <p>不仅仅是赤霞珠，中国还有更多独特的酿酒品种</p>
+                </div>
+
+                <div class="type-list">
+                    <div class="type-item">
+                        <div class="type-icon">🍷</div>
+                        <div class="type-content">
+                            <h3>赤霞珠</h3>
+                            <p>中国种植面积最广的品种，皮厚籽小，单宁强劲。在宁夏产区表现极佳，能酿造出具有黑醋栗和烟草香气的干红。</p>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <div class="type-icon">🍇</div>
+                        <div class="type-content">
+                            <h3>蛇龙珠</h3>
+                            <p>赤霞珠的同胞兄弟，原产波尔多。在中国表现出更好的成熟度和果香，常与赤霞珠混酿，增加酒的柔顺度。</p>
+                        </div>
+                    </div>
+
+                    <div class="type-item">
+                        <div class="type-icon">🥃</div>
+                        <div class="type-content">
+                            <h3>霞多丽</h3>
+                            <p>白葡萄品种的王者。在中国干白葡萄酒中占据重要地位，从清爽的苹果香到橡木桶陈酿的黄油香，风格多变。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section id="guide" class="container">
+            <div class="guide-grid">
+                <div class="guide-image">
+                    <img src="https://picsum.photos/seed/wineglass/600/400.jpg" alt="品鉴红酒">
+                </div>
+                <div class="guide-content">
+                    <h2>如何挑选优质中国红酒</h2>
+                    <p style="margin-bottom: 1.5rem; color: #666;">国产葡萄酒的品质参差不齐，掌握以下几点可以帮您做出更好的选择：</p>
+                    <ul class="guide-steps">
+                        <li><strong>看产地：</strong> 优先选择贺兰山东麓、新疆等知名产区，这些地区有明确的地理标志保护。</li>
+                        <li><strong>看酒标：</strong> 关注“年份”和“酒精度”。年份代表葡萄采摘时间，酒精度通常在12%vol以上。</li>
+                        <li><strong>看葡萄品种：</strong> 熟悉主栽品种（如赤霞珠、马瑟兰）的特性，避免盲目追求进口品种。</li>
+                        <li><strong>试口感：</strong> 优质的中国红酒单宁细腻，余味悠长，不会出现过于酸涩或酒精感过强的感觉。</li>
+                    </ul>
+                    <br>
+                    <a href="#" class="cta-btn">查看更多选购技巧</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        中国红酒网致力于推广中国本土葡萄酒文化，为消费者提供专业的产区资讯、品牌测评和品鉴指南。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">产区地图</a></li>
+                        <li><a href="#">名酒榜单</a></li>
+                        <li><a href="#">品酒师专栏</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">配送政策</a></li>
+                        <li><a href="#">退换货说明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">小红书笔记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 中国红酒网 版权所有 | 仅供演示参考</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
